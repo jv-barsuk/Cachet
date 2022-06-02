@@ -11,80 +11,64 @@
 
 return [
 
-    'dashboard'          => 'Dashboard',
-    'writeable_settings' => 'Das Cachet-Konfigurationsverzeichnis ist nicht beschreibbar. Bitte stellen Sie sicher, dass <code>./ bootstrap/cachet</code> vom Webserver beschreibbar ist.',
+    'dashboard' => 'Dashboard',
 
     // Incidents
     'incidents' => [
-        'title'                    => 'Vorfälle & Wartungsarbeiten',
-        'incidents'                => 'Ereignisse',
-        'logged'                   => '{0}Es gibt keine Ereignisse, gute Arbeit.|[1]Du hast ein Ereignis gemeldet.|[2,*]Du hast <strong>:count</strong> Ereignisse gemeldet.',
+        'title'                    => 'Ereignisse &amp; Termine',
+        'incidents'                => 'Vorfälle',
+        'logged'                   => '{0} Es gibt keine Vorfälle, gute Arbeit.|Du hast einen Vorfall gemeldet.|Du hast <strong>:count</strong> Vorfälle gemeldet.',
         'incident-create-template' => 'Vorlage erstellen',
-        'incident-templates'       => 'Ereignis Vorlagen',
-        'updates'                  => [
-            'title'   => 'Vorfall Updates für :incident',
-            'count'   => '{0}Keine Updates|[1]Ein Update|[2]Zwei Updates|[3,*]Mehrere Updates',
-            'add'     => [
-                'title'   => 'Vorfall-Update erstellen',
-                'success' => 'Dein Vorfall Update wurde erstellt.',
-                'failure' => 'Etwas ist mit dem Vorfall Update schief gelaufen.',
-            ],
-            'edit' => [
-                'title'   => 'Vorfall Update bearbeiten',
-                'success' => 'Vorfall wurde aktualisiert.',
-                'failure' => 'Etwas ist mit dem Aktualisieren des Vorfall Updates schief gelaufen',
-            ],
-        ],
-        'reported_by'              => 'Reported :timestamp by :user',
+        'incident-templates'       => 'Vorfall Vorlagen',
         'add'                      => [
-            'title'   => 'Ereignis hinzufügen',
-            'success' => 'Ereignis hinzugefügt.',
+            'title'   => 'Vorfall hinzufügen',
+            'success' => 'Vorfall hinzugefügt.',
             'failure' => 'Es ist ein Fehler beim Hinzufügen der Störung aufgetreten. Bitte erneut versuchen.',
         ],
         'edit' => [
-            'title'   => 'Ereignis bearbeiten',
-            'success' => 'Ereignis aktualisiert.',
+            'title'   => 'Vorfall bearbeiten',
+            'success' => 'Vorfall aktualisiert.',
             'failure' => 'Es ist ein Fehler beim Editieren der Störung aufgetreten. Bitte erneut versuchen.',
         ],
         'delete' => [
-            'success' => 'Das Ereignis wurde gelöscht und wird nicht mehr angezeigt.',
+            'success' => 'Der Vorfall wurde gelöscht und wird nicht mehr angezeigt.',
             'failure' => 'Die Störung konnte nicht gelöscht werden. Bitte versuche es erneut.',
         ],
 
         // Incident templates
         'templates' => [
-            'title' => 'Ereignis Vorlagen',
+            'title' => 'Vorfall Vorlagen',
             'add'   => [
-                'title'   => 'Ereignisvorlage erstellen',
-                'message' => 'Du solltest eine Ereignis-Vorlage hinzufügen.',
-                'success' => 'Deine neue Ereignis-Vorlage wurde angelegt.',
-                'failure' => 'Etwas ist mit der Ereignis-Vorlage schief gelaufen.',
+                'title'   => 'Vorfallvorlage erstellen',
+                'message' => 'Du solltest eine Vorfall-Vorlage hinzufügen.',
+                'success' => 'Deine neue Störungsvorlage wurde angelegt.',
+                'failure' => 'Etwas ist mit der Vorfallvorlage schiefgelaufen.',
             ],
             'edit' => [
                 'title'   => 'Vorlage bearbeiten',
-                'success' => 'Die Ereignis-Vorlage wurde aktualisiert.',
-                'failure' => 'Etwas ist mit dem Aktualisieren der Ereignis-Vorlage schief gelaufen',
+                'success' => 'Die Vorfallvorlage wurde aktualisiert.',
+                'failure' => 'Etwas ist mit dem Updaten der Vorfallvorlage schiefgelaufen',
             ],
             'delete' => [
-                'success' => 'Die Ereignis-Vorlage wurde gelöscht.',
-                'failure' => 'Die Ereignis-Vorlage konnte nicht gelöscht werden. Bitte versuche es erneut.',
+                'success' => 'Die Vorfall-Vorlage wurde gelöscht.',
+                'failure' => 'Die Vorfall-Vorlage konnte nicht gelöscht werden. Bitte versuche es erneut.',
             ],
         ],
     ],
 
     // Incident Maintenance
     'schedule' => [
-        'schedule'     => 'Wartungsarbeiten',
-        'logged'       => '{0}Es gibt keine geplanten Wartungen, gute Arbeit.|[1]Du hast einen Eintrag erstellt.|[2,*]Du hast <strong>:count</strong> Einträge erstellt.',
+        'schedule'     => 'Planmäßige Wartung',
+        'logged'       => '{0} Es gibt keine Zeitpläne, gute Arbeit.|Du hast einen Zeitplan geloggt.|Du hast <strong>:count</strong> Zeitpläne gemeldet.',
         'scheduled_at' => 'Geplant am :timestamp',
         'add'          => [
-            'title'   => 'Wartungsarbeiten hinzufügen',
-            'success' => 'Wartungsarbeiten hinzugefügt.',
+            'title'   => 'Planmäßige Wartung hinzufügen',
+            'success' => 'Zeitplan hinzugefügt.',
             'failure' => 'Etwas lief schief mit dem Hinzufügen des Zeitplans. Bitte versuchen Sie es erneut.',
         ],
         'edit' => [
             'title'   => 'Planmäßige Wartung bearbeiten',
-            'success' => 'Wartungsarbeiten wurden aktualisiert!',
+            'success' => 'Zeitplan wurde aktualisiert!',
             'failure' => 'Etwas lief schief mit dem Editieren des Zeitplans. Bitte versuchen Sie es erneut.',
         ],
         'delete' => [
@@ -97,17 +81,17 @@ return [
     'components' => [
         'components'         => 'Komponenten',
         'component_statuses' => 'Komponentenstatus',
-        'listed_group'       => 'Gruppenname :name',
+        'listed_group'       => 'Gruppiert unter :name',
         'add'                => [
             'title'   => 'Komponente hinzufügen',
             'message' => 'Sie sollten eine Komponente erstellen.',
             'success' => 'Komponente erstellt.',
-            'failure' => 'Etwas ist schief gelaufen mit der Komponenten-Gruppe, versuchen sie es erneut.',
+            'failure' => 'Etwas ist schief gelaufen mit der Komponente, versuchen sie es erneut.',
         ],
         'edit' => [
             'title'   => 'Komponente bearbeiten',
             'success' => 'Komponente aktualisiert.',
-            'failure' => 'Etwas ist schief gelaufen mit der Komponenten-Gruppe, versuchen sie es erneut.',
+            'failure' => 'Etwas ist schief gelaufen mit der Komponente, versuchen sie es erneut.',
         ],
         'delete' => [
             'success' => 'Die Komponente wurde gelöscht!',
@@ -116,17 +100,17 @@ return [
 
         // Component groups
         'groups' => [
-            'groups'        => 'Komponentengruppe|Komponentengruppen',
+            'groups'        => 'Komponentgruppe|Komponentgruppen',
             'no_components' => 'Sie sollten eine Komponentengruppe hinzufügen.',
             'add'           => [
                 'title'   => 'Eine Komponentengruppe hinzufügen',
                 'success' => 'Komponentengruppe hinzugefügt.',
-                'failure' => 'Etwas ist schief gelaufen mit der Komponenten-Gruppe, versuchen sie es erneut.',
+                'failure' => 'Etwas ist mit der Komponentengruppe schiefgelaufen, versuchen sie es erneut.',
             ],
             'edit' => [
                 'title'   => 'Komponentengruppe bearbeiten',
                 'success' => 'Komponentengruppe aktualisiert.',
-                'failure' => 'Etwas ist schief gelaufen mit der Komponenten-Gruppe, versuchen sie es erneut.',
+                'failure' => 'Etwas ist mit der Komponentengruppe schiefgelaufen, versuchen sie es erneut.',
             ],
             'delete' => [
                 'success' => 'Die Komponentengruppe wurde gelöscht!',
@@ -156,15 +140,13 @@ return [
     ],
     // Subscribers
     'subscribers' => [
-        'subscribers'          => 'Abonnenten',
-        'description'          => 'Abonnenten erhalten E-Mail Updates, wenn Vorfälle erstellt oder Komponenten bearbeitet werden.',
-        'description_disabled' => 'Um diese Funktion nutzen zu können, musst du zulassen, dass sich Personen für Benachrichtigungen anmelden dürfen.',
-        'verified'             => 'Bestätigt',
-        'not_verified'         => 'Nicht Bestätigt',
-        'subscriber'           => ':email, abonniert am :date',
-        'no_subscriptions'     => 'Aktualisierungen per E-Mail abonnieren',
-        'global'               => 'Alles abonniert',
-        'add'                  => [
+        'subscribers'      => 'Abonnenten',
+        'description'      => 'Abonnenten erhalten E-Mail Updates, wenn Vorfälle erstellt oder Komponenten bearbeitet werden.',
+        'verified'         => 'Verifiziert',
+        'not_verified'     => 'Nicht verifiziert',
+        'subscriber'       => ':email, abonniert am :date',
+        'no_subscriptions' => 'Aktualisierungen per E-Mail abonnieren',
+        'add'              => [
             'title'   => 'Einen neuen Abonnenten hinzufügen',
             'success' => 'Abonnent hinzugefügt.',
             'failure' => 'Etwas lief schief dem dem Hinzufügen eines Abonnenten. Bitte versuchen Sie es erneut.',
@@ -210,29 +192,18 @@ return [
         'app-setup' => [
             'app-setup'   => 'Anwendungsinstallation',
             'images-only' => 'Es können nur Bilder hochgeladen werden.',
-            'too-big'     => 'Die von Ihnen hochgeladene Datei ist zu groß. Sie können Dateien bis zu einer Maximalgröße von :size hochladen.',
+            'too-big'     => 'Die von Ihnen hochgeladene Datei ist zu groß. Laden Sie ein Bild welches kleiner als :size ist hoch',
         ],
         'analytics' => [
             'analytics' => 'Analytics',
         ],
-        'log' => [
-            'log' => 'Verlauf',
-        ],
         'localization' => [
-            'localization' => 'Standort',
+            'localization' => 'Localization',
         ],
         'customization' => [
             'customization' => 'Individualisierung',
             'header'        => 'Benutzerdefinierter HTML Header',
             'footer'        => 'Benutzerdefinierter HTML Footer',
-        ],
-        'mail' => [
-            'mail'  => 'E-Mail-Einstellungen',
-            'test'  => 'Test',
-            'email' => [
-                'subject' => 'Test-Benachrichtigung von Cachet',
-                'body'    => 'Dies ist ein Test-Benachrichtigung von Cachet.',
-            ],
         ],
         'security' => [
             'security'   => 'Sicherheit',
@@ -260,7 +231,7 @@ return [
 
     // Login
     'login' => [
-        'login'      => 'Einloggen',
+        'login'      => 'Anmelden',
         'logged_in'  => 'Sie sind eingeloggt.',
         'welcome'    => 'Willkommen zurück!',
         'two-factor' => 'Bitte geben Sie Ihren Token ein.',
@@ -293,8 +264,8 @@ return [
         'close'   => 'Gehe einfach direkt zu meinem Dashboard',
         'steps'   => [
             'component'  => 'Komponenten erstellen',
-            'incident'   => 'Ereignis erstellen',
-            'customize'  => 'Seite anpassen',
+            'incident'   => 'Vorfälle erstellen',
+            'customize'  => 'Personalisieren',
             'team'       => 'Benutzer hinzufügen',
             'api'        => 'API Token generieren',
             'two-factor' => 'Zwei-Faktor-Authentifizierung',

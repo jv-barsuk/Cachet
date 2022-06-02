@@ -14,6 +14,7 @@ return [
     'components' => [
         'last_updated' => 'Letztes Update :timestamp',
         'status'       => [
+            0 => 'Unbekannt',
             1 => 'Funktionsfähig',
             2 => 'Leistungsprobleme',
             3 => 'Teilweiser Ausfall',
@@ -22,6 +23,8 @@ return [
         'group' => [
             'other' => 'Andere Komponenten',
         ],
+        'select_all'   => 'Alle auswählen',
+        'deselect_all' => 'Alle abwählen',
     ],
 
     // Incidents
@@ -38,6 +41,15 @@ return [
             2 => 'Identifiziert',
             3 => 'Unter Beobachtung',
             4 => 'Behoben',
+        ],
+    ],
+
+    // Schedule
+    'schedules' => [
+        'status' => [
+            0 => 'Ausstehend',
+            1 => 'Laufend',
+            2 => 'Abgeschlossen',
         ],
     ],
 
@@ -65,15 +77,24 @@ return [
 
     // Subscriber
     'subscriber' => [
-        'subscribe' => 'Abonnieren Sie um die neuesten Updates zu erhalten.',
-        'button'    => 'Abonnieren',
+        'subscribe'           => 'Abonnieren Sie um die neuesten Updates zu erhalten.',
+        'unsubscribe'         => 'Abmelden',
+        'button'              => 'Abonnieren',
+        'manage_subscription' => 'Benachrichtigungen verwalten',
         'manage'    => [
-            'no_subscriptions' => 'Du hast im Augenblick alle Updates abonniert.',
-            'my_subscriptions' => 'Du hast im Augenblick folgende Updates abonniert.',
+            'notifications'       => 'Benachrichtigungen',
+            'notifications_for'   => 'Benachrichtigungen verwalten für',
+            'no_subscriptions'    => 'Du hast im Augenblick alle Benachrichtigungen abonniert.',
+            'update_subscription' => 'Benachrichtigungen aktualisieren',
+            'my_subscriptions'    => 'Du hast im Augenblick folgende Benachrichtigungen abonniert.',
+            'manage_at_link'      => 'Benachrichtigungen verwalten: :link',  
         ],
+
         'email' => [
+            'manage_subscription' => 'Du hast ein E-Mail bekommen, bitte klicke auf den Link um die Benachrichtigungen zu verwalten.',
             'subscribe'          => 'Aktualisierungen per E-Mail abonnieren.',
             'subscribed'         => 'Sie haben E-Mail-Benachrichtigungen abonniert, überprüfen Sie bitte Ihre E-Mail, um Ihr Abonnement zu bestätigen.',
+            'updated-subscribe'  => 'Deine Benachrichtigungen wurde erfolgreich aktualisiert.',
             'verified'           => 'Ihre E-Mail-Abonnement ist bestätigt worden. Danke!',
             'manage'             => 'Verwalte deine Abonnements',
             'unsubscribe'        => 'Von E-Mail-Updates deabonnieren.',
@@ -114,12 +135,12 @@ return [
         'username' => 'Benutzername',
         'email'    => 'E-Mail',
         'password' => 'Passwort',
-        'success'  => 'Ihr Konto wurde erfolgreich erstellt.',
-        'failure'  => 'Mit der Registrierung ist etwas schief gelaufen.',
+        'success'  => 'Dein Konto wurde erfolgreich erstellt.',
+        'failure'  => 'Bei der Registrierung ist etwas schief gegangen.',
     ],
 
     'system' => [
-        'update' => 'Es ist eine neuere Version von Cachet verfügbar. Lerne <a href="https://docs.cachethq.io/docs/updating-cachet">hier</a>!, wie du updaten kannst!',
+        'update' => 'Es ist eine neuere Version von Cachet verfügbar. Siehe <a href="https://docs.cachethq.io/docs/updating-cachet">hier</a>!, wie du das Update installierst!',
     ],
 
     // Modal
@@ -132,9 +153,19 @@ return [
         ],
     ],
 
+    // Meta descriptions
+    'meta' => [
+        'description' => [
+            'incident'  => 'Details und Updates über :name welcher am :date aufgetreten ist',
+            'schedule'  => 'Details über die geplante Wartung am :name ab :startDate',
+            'subscribe' => 'Anmelden um Benachrichtigungen von :app zu zu erhalten',
+            'overview'  => 'Bleibe up to date mit den neusten Benachrichtigungen zu: :app.',
+        ],
+    ],
+
     // Other
     'home'            => 'Startseite',
-    'description'     => 'Bleiben sie up to date mit den neuesten Service-Updates von: app.',
+    'description'     => 'Bleiben sie up to date mit den neuesten Benachrichtigungen von: :app.',
     'powered_by'      => 'Powered by <a href="https://cachethq.io" class="links">Cachet</a>.',
     'about_this_site' => 'Über diese Seite',
     'rss-feed'        => 'RSS',
